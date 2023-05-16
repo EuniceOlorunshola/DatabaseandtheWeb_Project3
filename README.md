@@ -40,6 +40,19 @@ The semantic errors in the database instance file are listed below:
 * Participation error in relationship error
 * Invalid attributes in relationship
 
-# IV : Generate Relational Design
+
+  # Steps to access the python file 
+  
+  1. Put StudentDBSchema.json, StudentDBInstance.json and my python file GenerateInstanceSchema.py in the same directory.
+  2. Replace the file path in line 9 under the comment # load the database schema from the input file with your own file path of your directory that contains the StudentDBSchema.json file.
+   * Replace the file path in line 15 under the comment # load the generated instance schema from the input file with your own file path of your directory that contains the GenerateInstanceSchema.py file.
+   * Replace the file path in line 21 under the comment # load the database instance from the input file with your own file path of your directory that contains the StudentDBInstance.json file
+   
+ 3. If you are using Microsoft visual studio code run the code by start debugging or go on the terminal and create a directory with the file path that contains the StudentDBSchema.json StudentDBInstance.json and GenerateInstanceSchema.py file.
+ 
+ 4. Type the command in the terminal python Validate.py StudentDBInstance.json this will first output to check if the database instance file is validated with the generatedinstanceschema file then it will check if all 3 files is validated.
+  
+ 
+   # IV : Generate Relational Design
 
 Write a Python program (GenerateRelationalDesign.py) that takes as command line argument the name of a database schema file, such as StudentDBSchema.json, and outputs to the terminal a series of MySQL CREATE TABLE statements that corresponds to the ER Schema using the standard ER-to-Relational mapping.
