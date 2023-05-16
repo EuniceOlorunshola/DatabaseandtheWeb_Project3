@@ -43,10 +43,10 @@ The semantic errors in the database instance file are listed below:
 
   # Steps to access the python file 
   
-  1. Put StudentDBSchema.json, StudentDBInstance.json and my python file GenerateInstanceSchema.py in the same directory.
-  2. Replace the file path in line 9 under the comment # load the database schema from the input file with your own file path of your directory that contains the StudentDBSchema.json file.
-   * Replace the file path in line 15 under the comment # load the generated instance schema from the input file with your own file path of your directory that contains the GenerateInstanceSchema.py file.
-   * Replace the file path in line 21 under the comment # load the database instance from the input file with your own file path of your directory that contains the StudentDBInstance.json file
+1. Put StudentDBSchema.json, StudentDBInstance.json and my python file GenerateInstanceSchema.py in the same directory.
+2. Replace the file path in line 9 under the comment # load the database schema from the input file with your own file path of your directory that contains the StudentDBSchema.json file.
+   *  Replace the file path in line 15 under the comment # load the generated instance schema from the input file with your own file path of your directory that contains the GenerateInstanceSchema.py file.
+   *  Replace the file path in line 21 under the comment # load the database instance from the input file with your own file path of your directory that contains the StudentDBInstance.json file
    
  3. If you are using Microsoft visual studio code run the code by start debugging or go on the terminal and create a directory with the file path that contains the StudentDBSchema.json StudentDBInstance.json and GenerateInstanceSchema.py file.
  
