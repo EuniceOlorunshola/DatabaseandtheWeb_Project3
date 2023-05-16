@@ -57,7 +57,7 @@ The semantic errors in the database instance file are listed below:
  4. Type the command in the terminal python Validate.py StudentDBInstance.json this will first output to check if the database instance file is validated with the generatedinstanceschema file then it will check if all 3 files is validated.
   
  
-   # IV : Generate Relational Design
+   # Part IV : Generate Relational Design
 
 Write a Python program (GenerateRelationalDesign.py) that takes as command line argument the name of a database schema file, such as StudentDBSchema.json, and outputs to the terminal a series of MySQL CREATE TABLE statements that corresponds to the ER Schema using the standard ER-to-Relational mapping.
 
