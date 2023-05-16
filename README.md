@@ -11,7 +11,17 @@ It contains 4 parts
 # Part II : Python program to Generate JSON Schema for Instance Files
 
  Write a Python program (GenerateInstanceSchema.py) that takes as command line argument the name of a database schema file, such as StudentDBModel.json, and outputs to the terminal a JSON Schema file for the database instance files corresponding to the input ER schema. As before, the output schema should strictly enforce the object structures with no additional keys or no fewer keys.
+ 
+  * Steps to access the python file 
   
+  1. I used Microsoft Visual Studio Code to code my python program 
+  2. I used StudentDBSchema.json file to generate the instance schema.
+  3. Put StudentSchema.json and my python file GenerateInstanceSchema.py in the same directory
+  4. Replace the file path in line 14 under the comment # load the database schema from the input file with your own file path of your directory that contains StudentDBSchema.json file.
+  5. If you are using Microsoft visual studio code run the code by start debugging or go on the terminal and create a directory with the file path that contains the StudentDBSchema.json and GenerateInstanceSchema.py file
+  6.  Type the command in the terminal python GenerateInstanceSchema.py  StudentDBSchema.json
+This will output the instance schema to the terminal.
+
 # Part III : Validate Instance Files
 
 Write a Python program (Validate.py) to validate an database instance file against the database schema file and the generated instance schema file for both "semantic" as well as "syntactic" errors. The program should first validate the instance file with the generated schema file from previous part for conformity. Then, semantic errors should be caught. The semantic errors in the database schema file are listed below:
