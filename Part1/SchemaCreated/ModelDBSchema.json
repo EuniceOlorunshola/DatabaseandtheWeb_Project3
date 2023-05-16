@@ -1,0 +1,900 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "Model Schema",
+    "description": "This is the JSON schema for database schema StudentDBSchema",
+    "database": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string",
+                "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+            },
+            "entities": {
+                "description": "This is the student entity",
+                "type": "array",
+                "items": [
+                    {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type":"string",
+                                "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                            },
+                            "attributes": {
+                                "description": "These are the attributes that belongs to students",
+                                "type": "array",
+                                "items": [
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "This is the sno attribute",
+                                                "type": "string",
+                                                "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "size": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": ["name", "type", "size"]
+                                            
+                                        
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "This is the sname attribute",
+                                                "type": "string",
+                                                "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "size": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": ["name", "type", "size"]
+                                    },
+                                    {
+                                        "type":"object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "This is the gender of the student attribute",
+                                                "type":"string",
+                                                "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                            },
+                                            "type": {
+                                                "type":"string"
+                                            },
+                                            "size": {
+                                                "type":"integer"
+
+                                            }
+                                        },
+                                        "required":["name", "type", "size"]
+                                        },
+                                        {
+                                            "type":"object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the student email attribute",
+                                                    "type":"string",
+                                                    "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                        
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required":["name", "type", "size"]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the student address attribute",
+                                                    "type": "string",
+                                                    "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required":["name", "type", "size"]
+                                        }
+                                    ]
+                                },
+                                "primaryKey": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": ["name", "attributes", "primaryKey"]
+                        },
+                        {
+                            "description": "This is the department entity",
+                            "type": "object",
+                            "name": {
+                                "type": "string"
+                            }, 
+                            "attributes": {
+                                "type": "array",
+                                "items": [
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "This is the dno attribute",
+                                                "type": "string",
+                                                "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "size": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": ["name", "type", "size"]
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                    "name": {
+                                        "description": "This is the sname attribute",
+                                        "type": "string",
+                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                    },
+                                    "type": {
+                                        "type": "string"
+                                    },
+                                    "size": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": ["name", "type", "size"]
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "description": "This is the department location attribute",
+                                            "type": "string",
+                                            "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "size": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": ["name", "type", "size"]
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "This is the department phone attribute",
+                                                "type": "string",
+                                                "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "size": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": ["name", "type", "size"]
+
+                                    },
+                                       {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "This is the department website attribute",
+                                                "type": "string",
+                                                "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "size": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "required": ["name", "type", "size"]
+                                    }
+                                ]
+                            },
+                            "primaryKey": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "string"
+                                }
+                              ]
+                            },
+                          "required": ["name", "attributes", "primaryKey"]
+                        },
+                        {
+                            "description": "This is the course entity",
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "attributes": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the cno attribute",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    
+                                                    
+                                                },
+                                                "type": {
+                                                    "type": "string"
+
+                                                },
+                                                "size": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "This is the cname attribute",
+                                                "type": "string",
+                                                "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "size": {
+                                            "type": "integer"
+                                        }
+                                        
+                                    },
+                                    "required":["name", "type", "size"]
+                                    
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the course classroom attribute",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        
+
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the course days attribute",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the course starttime attribute",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the course endtime attribute",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+
+                                        }
+                                    ]
+                                },
+                                "primaryKey": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": ["name", "attributes", "primaryKey"]
+                        },
+                        {
+                            "description": "This is the faculty attribute",
+                            "type": "object",
+                            "prpoerties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "attributes": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the fno attribute",
+                                                    "type": "string",
+                                                    "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                                
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the faculty fname attribute",
+                                                    "type": "string"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the faculty gender attribute",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the faculty homepage attribute",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        },
+                                        {
+                                            "type":"object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the faculty room attribute",
+                                                    "type": "string",
+                                                    "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "type": {
+                                                    "type": "string"
+                                                },
+                                                "size": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": ["name", "type", "size"]
+                                        }
+                                    ]
+                                },
+                                "primaryKey": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": ["name", "attributes", "primaryKey"]
+                        }
+                    ]
+                },
+                "relationships": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "description": "This is enroll",
+                                    "type": "string",
+                                    "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$"
+                                },
+                                "entities": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the student entity for enrolls",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "cardinality": {
+                                                    "type": "string",
+                                                    "enum": ["one", "many"]
+                                                },
+                                                "participation": {
+                                                    "type": "string",
+                                                    "enum": ["mandatory", "optional"]
+                                                }
+                                            
+                                            },
+                                            "required": ["name", "cardinality", "participation"]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "This is the course entity for enroll",
+                                                    "type": "string",
+                                                    "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                },
+                                                "cardinality": {
+                                                    "type": "string",
+                                                    "enum": ["one", "many"]
+                                                },
+                                                "participation": {
+                                                    "type": "string",
+                                                    "enum": ["mandatory", "optional"]
+                                                }
+                                            },
+                                            "required": ["name", "cardinality", "participation"]
+                                             }
+                                            ]
+                                        }
+                                    },
+                                    "attributes": {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "This is the grade attribute",
+                                                        "type": "string",
+                                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    },
+                                                    "type": {
+                                                        "type": "string"
+                                                    },
+                                                    "size": {
+                                                        "type": "integer"
+                                                    }
+
+                                                },
+                                                "required": ["name", "type", "size"]
+                                            }
+                                                
+                                            
+                                        ]
+                                    },
+                                    "required": ["name", "entities", "attributes"]
+                                },
+                                {
+                                    "type":"object",
+                                    "properties": {
+                                        "name": {
+                                            "description": "This is study",
+                                            "type": "string",
+                                            "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                        },
+                                        "entities": {
+                                            "type": "array",
+                                            "items": [
+                                                {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "This is the student entity for study",
+                                                            "type": "string",
+                                                            "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                        },
+                                                        "cardinality": {
+                                                            "type": "string",
+                                                            "enum": ["one", "many"]
+                                                        },
+                                                        "participation": {
+                                                            "type": "string",
+                                                            "enum": ["mandatory", "optional"]
+                                                        }
+                                                    },
+                                                    "required": ["name", "cardinality", "participation"]
+            
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "This is the department entity for study",
+                                                            "type": "string",
+                                                            "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                        },
+                                                        "cardinality": {
+                                                            "type": "string",
+                                                            "enum": ["one", "many"]
+                                                        },
+                                                        "participation": {
+                                                            "type": "string",
+                                                            "enum": ["mandatory", "optional"]
+                                                        }
+                                                    },
+                                                    "required": ["name", "cardinality", "participation"]
+                                                }
+                                            ]
+                                        },
+                                        "attributes": {
+                                            "type": "array",
+                                            "items": {}
+                                        }
+                                    },
+                                    "required": ["name", "entities", "attributes"]
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "description": "This is worksfor",
+                                            "type": "string",
+                                            "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                        },
+                                        "entities": {
+                                            "type": "array",
+                                            "items": [
+                                                {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "This is the department entity for worksfor",
+                                                            "type": "string",
+                                                            "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                        },
+                                                        "cardinality": {
+                                                            "type": "string",
+                                                            "enum": ["one", "many"]
+                                                        },
+                                                        "participation": {
+                                                            "type": "string",
+                                                            "enum": ["mandatory", "optional"]
+                                                        }
+                                                    },
+                                                    "required": ["name", "cardinality", "participation"]
+                                                },
+                                                {
+                                                        "type": "object",
+                                                        "properties":{
+                                                            "name": {
+                                                                "description": "This is the faulty entity for worksfor",
+                                                                "type": "string",
+                                                                "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                        },
+                                                    "cardinality": {
+                                                        "type": "string",
+                                                        "enum": ["one", "many"]
+                                                    },
+                                                    "participation": {
+                                                        "type": "string",
+                                                        "enum": ["mandatory", "optional"]
+                                                    }
+                                                },
+                                                "required": ["name", "cardinality", "participation"]
+                                            }
+                                        ]
+                                    },
+                                    "attributes": {
+                                        "type": "array",
+                                        "items": {}
+                                    }
+                                },
+                                "required": ["name", "entities", "attributes"]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "description": "This is offers",
+                                        "type": "string",
+                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                    },
+                                    "entities": {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "This is the department entity for offers",
+                                                        "type": "string",
+                                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    },
+                                                    "cardinality": {
+                                                        "type": "string",
+                                                        "enum": ["one", "many"]
+                                                    },
+                                                    "participation": {
+                                                        "type": "string",
+                                                        "enum": ["mandatory", "optional"]
+                                                    }
+                                                },
+                                                "required": ["name", "cardinality", "participation"]
+                                            },
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "This is the course entity for offers",
+                                                        "type": "string",
+                                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    },
+                                                    "cardinality": {
+                                                        "type": "string",
+                                                        "enum": ["one", "many"]
+                                                    },
+                                                    "participation": {
+                                                        "type": "string",
+                                                        "enum": ["mandatory", "optional"]
+                                                    }
+                                                },
+                                                "required": ["name", "cardinality", "participation"]
+                                            }
+                                        ]
+                                    },
+                                    "attributes": {
+                                        "type": "array",
+                                        "items": {}
+                                    }
+                                },
+                                "required": ["name", "entities", "attributes"]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "description": "This is advisor",
+                                        "type": "string",
+                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                    },
+                                    "entities": {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "type":"object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "This is the student entity for advisor",
+                                                        "type": "string",
+                                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    },
+                                                    "cardinality": {
+                                                        "type": "string",
+                                                        "enum": ["one", "many"]
+                                                    },
+                                                    "participation": {
+                                                        "type": "string",
+                                                        "enum": ["mandatory", "optional"]
+                                                    }
+                                                },
+                                                "required": ["name", "cardinality", "participation"]
+                                            },
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "This is the faculty entity for advisor",
+                                                        "type": "string",
+                                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    },
+                                                    "cardinality": {
+                                                        "type": "string",
+                                                        "enum": ["one", "many"]
+                                                    },
+                                                    "participation": {
+                                                        "type": "string",
+                                                        "enum": ["mandatory", "optional"]
+                                                    }
+                                                },
+                                                "required": ["name", "cardinality", "participation"]
+                                            }
+                                        ]
+                                    },
+                                    "attributes": {
+                                        "type": "array",
+                                        "items": {}
+                                    }
+                                },
+                                "required": ["name", "entities", "attributes"]
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "description": "This is teaches",
+                                        "type": "string",
+                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                    },
+                                    "entities": {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "This is the faculty entity for teaches",
+                                                        "type": "string",
+                                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    },
+                                                    "cardinality": {
+                                                        "type": "string",
+                                                        "enum": ["one", "many"]
+                                                    },
+                                                    "participation": {
+                                                        "type": "string",
+                                                        "enum": ["mandatory", "optional"]
+                                                    }
+                                                },
+                                                "required": ["name", "cardinality", "participation"]
+                                            },
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "This is the course entity for teaches",
+                                                        "type": "string",
+                                                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+                                                    },
+                                                    "cardinality": {
+                                                        "type": "string",
+                                                        "enum": ["one", "many"]
+                                                    },
+                                                    "participation": {
+                                                        "type": "string",
+                                                        "enum": ["mandatory", "optional"]
+                                                    }
+                                                },
+                                                "required": ["name", "cardinality", "participation"]
+                                            }
+                                        ]
+                                    },
+                                    "attributes": {
+                                        "type": "array",
+                                        "items": {}
+                                    }
+                                },
+                                "required": ["name", "entities", "attributes"]
+                            }
+                        ]
+                    }
+                },
+                "required": ["name", "entities", "relationships"]
+            }
+}
+                                
+                                    
+                                
+                            
+
+                                                
+
+                                                
+                                
+
+                                       
+                                        
+                                        
+                                        
+                                        
+                            
+                       
+                        
+                
+                    
+                        
+                        
+                                        
+                                        
+                                       
+
+                            
+                                    
+                                                
+                                          
+                        
+
+                          
+                          
+                         
