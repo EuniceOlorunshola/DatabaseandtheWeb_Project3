@@ -16,7 +16,7 @@ It contains 4 parts
 
  Write a Python program (GenerateInstanceSchema.py) that takes as command line argument the name of a database schema file, such as StudentDBModel.json, and outputs to the terminal a JSON Schema file for the database instance files corresponding to the input ER schema. As before, the output schema should strictly enforce the object structures with no additional keys or no fewer keys.
  
-  * Steps to access the python file 
+  # Steps to access the python file 
   
    1. I used Microsoft Visual Studio Code to code my python program 
    2. I used StudentDBSchema.json file to generate the instance schema.
@@ -61,7 +61,7 @@ The semantic errors in the database instance file are listed below:
 
 Write a Python program (GenerateRelationalDesign.py) that takes as command line argument the name of a database schema file, such as StudentDBSchema.json, and outputs to the terminal a series of MySQL CREATE TABLE statements that corresponds to the ER Schema using the standard ER-to-Relational mapping.
 
-* Steps to access the python file 
+# Steps to access the python file 
 
 1. Put StudentDBSchema.json and my python file GenerateRelationalDesign.py in the same directory.
 2. Replace the file path in line under the comment #load the schema from the input file with your own file path of your directory that contains the StudentDBSchema.json file
