@@ -6,7 +6,11 @@ It contains 4 parts
 
 # Part I : JSON Schema for Schema files 
 
-  Design a JSON Schema(ModelSchema.json) for database schema files such as StudentDBSchema.json.
+  Design a JSON Schema(ModelSchema.json) for database schema files such as StudentDBSchema.json. Here are some constraints to be imposed:
+  
+  * The individual object structures must strictly conform to the keys; i.e., no additional keys or no fewer keys should be allowed.
+  * The schema should restrict cardinalities to be one of "one" or "many" and the participation to be one of "mandatory" or "optional".
+  * Database, entity, relationship, and attribute names must begin with a letter and may include letters, digits, and underscore characters.  
   
 # Part II : Python program to Generate JSON Schema for Instance Files
 
@@ -56,3 +60,11 @@ The semantic errors in the database instance file are listed below:
    # IV : Generate Relational Design
 
 Write a Python program (GenerateRelationalDesign.py) that takes as command line argument the name of a database schema file, such as StudentDBSchema.json, and outputs to the terminal a series of MySQL CREATE TABLE statements that corresponds to the ER Schema using the standard ER-to-Relational mapping.
+
+* Steps to access the python file 
+
+1. Put StudentDBSchema.json and my python file GenerateRelationalDesign.py in the same directory.
+2. Replace the file path in line under the comment #load the schema from the input file with your own file path of your directory that contains the StudentDBSchema.json file
+3. In the terminal create a directory with the file path that contains the StudentDBSchema.json file
+4. Type the command: python GenerateRelationalDesign.py StudentDBSchema.json
+This will output the create table statements.
