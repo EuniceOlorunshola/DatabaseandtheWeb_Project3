@@ -14,12 +14,12 @@ It contains 4 parts
  
   * Steps to access the python file 
   
-    1. I used Microsoft Visual Studio Code to code my python program 
-    2. I used StudentDBSchema.json file to generate the instance schema.
-    3. Put StudentSchema.json and my python file GenerateInstanceSchema.py in the same directory
-    4. Replace the file path in line 14 under the comment # load the database schema from the input file with your own file path of your directory that contains StudentDBSchema.json file.
-    5. If you are using Microsoft visual studio code run the code by start debugging or go on the terminal and create a directory with the file path that contains the StudentDBSchema.json and GenerateInstanceSchema.py file
-    6.  Type the command in the terminal python GenerateInstanceSchema.py  StudentDBSchema.json. This will output the instance schema to the terminal.
+   1. I used Microsoft Visual Studio Code to code my python program 
+   2. I used StudentDBSchema.json file to generate the instance schema.
+   3. Put StudentSchema.json and my python file GenerateInstanceSchema.py in the same directory
+   4. Replace the file path in line 14 under the comment # load the database schema from the input file with your own file path of your directory that contains StudentDBSchema.json file.
+   5. If you are using Microsoft visual studio code run the code by start debugging or go on the terminal and create a directory with the file path that contains the StudentDBSchema.json and GenerateInstanceSchema.py file
+   6.  Type the command in the terminal python GenerateInstanceSchema.py  StudentDBSchema.json. This will output the instance schema to the terminal.
 
 # Part III : Validate Instance Files
 
